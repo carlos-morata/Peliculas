@@ -35,14 +35,14 @@ Está desarrollada con **HTML, CSS (Flexbox)** y **JavaScript**, y se divide en 
 
 ### 🧠 Fase 2
 
-- Añadir un filtro de búsqueda por texto:
-- Incluir un input de texto con el evento onchange.
-- El usuario podrá escribir el nombre de una película y se renderizarán solo las películas que coincidan.
+- Añadir un **filtro de búsqueda** por texto:
+- Incluir un input de texto con el **evento onchange.**
+- El usuario podrá escribir el nombre de una película y se **renderizarán solo las películas que coincidan.**
 
-- Editar una película:
-- Permitir modificar los datos de una película existente.
-- Actualizar la información en el array y en la tabla.
+- **Editar una película:**
+- Permitir **modificar** los **datos** de una **película existente.**
+- **Actualizar la información en el array y en la tabla.**
 
-- Borrar una película:
-- Incluir un botón o icono que permita eliminar una película concreta del listado.
-- La tabla se debe volver a renderizar automáticamente.
+- **Borrar una película:**
+- Incluir un **botón** o icono que permita **eliminar** una **película concreta** del listado.
+- La **tabla se debe volver a renderizar automáticamente.**
