@@ -1,0 +1,350 @@
+@import url(normalize.css);
+/* Variables */
+:root {
+    --bg: #0d0d0d;
+    --bgSecond: #1a1a1a;
+    --colorRed: #e50914;
+    --colorRed2: #b20710;
+    --text: #fff;
+    --textSecond: #b3b3b3;
+    --letter1: 1px;
+    --letter2: 2px;
+    --radius: 15px;
+    --box: border-box;
+}
+
+/* ESTILOS BODY */
+body {
+    background-color:var(--bg);
+    height: 100%;
+    width: 100%;
+}
+
+/* ESTILOS HEADER */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--text);
+    box-sizing: var(--box);
+    border-bottom: 2px solid var(--bgSecond);
+}
+
+.container-header h1 {
+    color: var(--colorRed);
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 35px;
+    letter-spacing: var(--letter2);
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 35px;
+    gap: 30px;
+    box-sizing: var(--box);
+}
+
+.header-list li  {
+    list-style: none;
+}
+
+.header-list li i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fa-bell, .fa-user-circle {
+    opacity: 0.7;
+}
+
+.header-list input {
+    width: 300px;
+    padding: 8px;
+    background-color: var(--bgSecond);
+    color: var(--textSecond);
+    border: 2px solid var(--colorRed2);
+    border-radius: var(--radius);
+}
+
+.header-list input::placeholder {
+    font-weight: bold;
+    letter-spacing: var(--letter1);
+}
+
+/* ESTILOS MAIN */
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    color: var(--text);
+    box-sizing: var(--box);
+}
+
+.container-main > section {
+    margin-top: 30px;
+} 
+
+/* ESTILOS SECCIONES FORMULARIOS */
+.section-forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+    height: 100%;
+}
+
+.section-form {
+    width: 45%;
+    height: 90%;
+    background-color: var(--bg);
+    box-shadow: 1px 2px 3px 0px var(--colorRed2);
+    border-radius: var(--radius);
+    box-sizing: var(--box);
+}
+
+.section-form h2 {
+    color: var(--colorRed);
+    letter-spacing: var(--letter2);
+    text-align: center;
+    font-size: 25px;
+}
+
+#form-film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+#form-film input, 
+#form-film textarea, 
+#form-film select,
+#form-film button{
+    width: 85%;
+    padding: 8px;
+    margin-top: 4px;
+    background-color: var(--bgSecond);
+    color: var(--textSecond);
+    border: 2px solid var(--colorRed2);
+    border-radius: var(--radius);
+}
+
+#form-film button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#form-film > label {
+    width: 85%;
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--textSecond);
+    letter-spacing: var(--letter1);
+}
+
+.form-filters div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 65%;
+    column-gap: 20px;
+    box-sizing: var(--radius);
+}
+
+#content-filters label, select, input{
+    width: 85%;
+}
+
+#content-filters select ~ label {
+    margin-top: 50px;
+}
+
+#content-filters > label {
+    color: var(--textSecond);
+    font-size: 18px;
+    letter-spacing: var(--letter1);
+
+}
+
+#content-filters select, #content-filters input {
+    padding: 8px;
+    margin-top: 6px;
+    background-color: var(--bgSecond);
+    color: var(--textSecond);
+    border: 2px solid var(--colorRed2);
+    border-radius: var(--radius);
+}
+
+#filtYear {
+    margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+/* ESTILOS SECCIÓN TABLA PELÍCULAS */
+.section-films {
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: var(--radius);
+    box-sizing: var(--box);
+    background-color: var(--bg);
+    box-shadow:  0px 0px 10px 5px var(--bgSecond);
+}
+
+.table-films {
+    width: 95%;
+    height: 95%;
+    box-sizing: var(--radius);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-films thead {
+    font-size: 22px;
+    letter-spacing: var(--letter2);
+    font-weight: bold;
+    color: var(--colorRed);
+}
+
+.row-film td {
+    border: 2px solid var(--bgSecond);
+}
+
+.row-film td > h4 {
+    font-size: 19px;
+    letter-spacing: var(--letter2);
+}
+
+.row-film td > p {
+    color: var(--textSecond);
+    letter-spacing: var(--letter1);
+    font-size: 16px;
+}
+
+.row-film button {
+    width: 150px;
+    padding: 10px;
+    background-color: var(--bgSecond);
+    color: var(--textSecond);
+    border: 2px solid var(--colorRed2);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.button-edit {
+    margin-top: 10px;
+}
+
+.row-film img {
+    width: 150px;
+    height: 180px;
+}
+
+/* ESTILOS FOOTER */
+.container-footer {
+    margin-top: 25px;
+    border-top: 2px solid var(--bgSecond);
+}
+
+.container-footer p {
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: var(--letter1);
+    color: var(--text);
+}
+
+/* DISEÑO MÓVIL */
+@media (max-width: 450px) {
+    .container-header {
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+    }
+    .header-list li {
+        display: none;
+    }
+    .header-list li:first-child {
+        display: block;
+    }
+
+    .container-main {
+        width: 100%;
+    }
+    .section-forms {
+        width: 100%;
+        margin-left: 30px;
+    }
+    .section-form {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .section-form h2 {
+        font-size: 35px;
+    }
+    .section-films {
+        width: 100%;
+    }
+    .table-films {
+        display: block;
+        overflow: auto;
+    }
+    .container-footer {
+        width: 100%;
+        border-top: none;
+    }
+}
+
+/* DISEÑO TABLET */
+@media(max-width: 800px) {
+       .container-header {
+        width: 100%;
+    }
+    .header-list li {
+        display: none;
+    }
+    .header-list li:first-child {
+        display: block;
+    }
+
+    .container-main {
+        width: 100%;
+    }
+    .section-forms {
+        width: 100%;
+    }
+    .section-form {
+        width: 45%;
+    }
+    .section-form h2 {
+        font-size: 30px;
+    }
+    .section-films {
+        width: 90%;
+    }
+    .table-films {
+        display: block;
+        overflow: auto;
+    }
+    .container-footer {
+        width: 100%;
+    }
+}
