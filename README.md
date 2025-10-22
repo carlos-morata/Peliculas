@@ -1,5 +1,5 @@
 # 🎬 Proyecto: Películas
-![Imagen del proyecto](./img/Proyecto Películas)
+![Imagen del proyecto](./img/Proyecto Películas.png)
 
 ## 📖 Descripción
 Aplicación web que permite **añadir, mostrar, filtrar, editar y eliminar películas**.  
