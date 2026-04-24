@@ -74,19 +74,19 @@ tableBody.innerHTML = ""
     filmstoRender.forEach(film => {
     tableBody.innerHTML += 
         `<tr class="row-film">
-            <td>
+            <td class="col-film">
                 <img src="${film.url_img}" alt="Portada de ${film.title}" title="${film.title}">
             </td>
-            <td>
+            <td class="col-film">
                 <h4>${film.title}</h4>
             </td>
-            <td>
+            <td class="col-film">
                 <p>${film.year}</p>
             </td>
-            <td>
+            <td class="col-film">
                 <p>${film.description}</p>
             </td>
-            <td>
+            <td class="col-film">
                 <p>${film.gender}</p>
             </td>
             <td>
@@ -135,9 +135,57 @@ tableFilms.appendChild(tableBody)
             // Accedemos a la fila y la eliminamos
             event.target.closest(".row-film").remove()
         });
-    })
+    });
 
-}
+    // Editar película
+    const trFilm = document.querySelectorAll(".row-film");
+    const editButton = document.querySelectorAll(".button-edit");
+
+    editButton.forEach((button, index) => {
+        button.addEventListener("click", () =>{
+
+            trFilm[index].innerHTML = `
+            <td colspan="6">
+                <form class="edit-form">
+                    <input type="text" name="url_img" value="${films[index].url_img}" required placeholder="Nombre de la Película">
+                    <input type="text" name="title" value="${films[index].title}" required placeholder="Nombre de la Película">
+                    <input type="number" name="year" value="${films[index].year}" required placeholder="Año de la Película">
+                    <input name="description" value="${films[index].description}" required>
+                    <select name="gender" value"${films[index].gender}">
+                        <option value="Todos">Todos</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Romántico">Romántico</option>
+                        <option value="Drama">Drama</option>
+                    </select>
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" class="cancel-edit">Cancelar Edición</button>
+                </form>
+            </td>
+            `;
+            const editForm = document.querySelector(".edit-form")
+            const cancelEdit = document.querySelector(".cancel-edit");
+
+                editForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+        
+                    films[index].url_img = editForm.elements.url_img.value.trim();
+                    films[index].title = editForm.elements.title.value.trim();
+                    films[index].year = editForm.elements.year.value.trim();
+                    films[index].description = editForm.elements.description.value.trim();
+                    films[index].gender = editForm.elements.gender.value.trim();
+
+                    renderFilms();
+                });
+                cancelEdit.addEventListener("click", () => {
+                    // Restaurar Valores
+                    renderFilms();
+                });
+        });
+    });
+
+};
 renderFilms(films)
 
 // Filtro por Título

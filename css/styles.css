@@ -1,4 +1,5 @@
 @import url(normalize.css);
+
 /* Variables */
 :root {
     --bg: #0d0d0d;
@@ -16,8 +17,6 @@
 /* ESTILOS BODY */
 body {
     background-color:var(--bg);
-    height: 100%;
-    width: 100%;
 }
 
 /* ESTILOS HEADER */
@@ -25,7 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     color: var(--text);
     box-sizing: var(--box);
     border-bottom: 2px solid var(--bgSecond);
@@ -239,7 +238,7 @@ select:focus {
 }
 
 .row-film button {
-    width: 150px;
+    width: 90%;
     padding: 10px;
     background-color: var(--bgSecond);
     color: var(--textSecond);
@@ -272,55 +271,17 @@ select:focus {
     color: var(--text);
 }
 
-/* DISEÑO MÓVIL */
-@media (max-width: 450px) {
-    .container-header {
-        width: 100%;
-        text-align: center;
-        border-bottom: none;
-    }
-    .header-list li {
-        display: none;
-    }
-    .header-list li:first-child {
-        display: block;
-    }
-
-    .container-main {
-        width: 100%;
-    }
-    .section-forms {
-        width: 100%;
-        margin-left: 30px;
-    }
-    .section-form {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .section-form h2 {
-        font-size: 35px;
-    }
-    .section-films {
-        width: 100%;
-    }
-    .table-films {
-        display: block;
-        overflow: auto;
-    }
-    .container-footer {
-        width: 100%;
-        border-top: none;
-    }
-}
-
 /* DISEÑO TABLET */
 @media(max-width: 800px) {
-       .container-header {
+    
+    .container-header {
         width: 100%;
     }
+
     .header-list li {
         display: none;
     }
+
     .header-list li:first-child {
         display: block;
     }
@@ -328,22 +289,88 @@ select:focus {
     .container-main {
         width: 100%;
     }
+
     .section-forms {
         width: 100%;
     }
+
     .section-form {
         width: 45%;
     }
-    .section-form h2 {
-        font-size: 30px;
-    }
+
     .section-films {
         width: 90%;
     }
+
     .table-films {
         display: block;
         overflow: auto;
     }
+
+    .container-footer {
+        width: 100%;
+    }
+}
+
+/* DISEÑO MÓVIL */
+@media (max-width: 450px) {
+    
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .container-header h1 {
+        margin-left: 0;
+    }
+
+    .header-list {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-list li {
+        display: none;
+    }
+
+    .header-list input {
+        width: 265px;
+    }
+
+    .container-main {
+        width: 100vw;
+    }
+
+    .section-forms {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .section-form {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    #form-film {
+        width: 100%;
+    }
+
+    .container-main > section:nth-child(2) {
+        margin-top: 75px;
+    }
+
+    .section-films {
+        width: 95%;
+    }
+
+    .table-films {
+        display: block;
+        overflow: auto;
+    }
+    
     .container-footer {
         width: 100%;
     }
