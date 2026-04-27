@@ -147,11 +147,15 @@ tableFilms.appendChild(tableBody)
             trFilm[index].innerHTML = `
             <td colspan="6">
                 <form class="edit-form">
-                    <input type="text" name="url_img" value="${films[index].url_img}" required placeholder="Nombre de la Película">
-                    <input type="text" name="title" value="${films[index].title}" required placeholder="Nombre de la Película">
-                    <input type="number" name="year" value="${films[index].year}" required placeholder="Año de la Película">
-                    <input name="description" value="${films[index].description}" required>
-                    <select name="gender" value"${films[index].gender}">
+                    <input type="text" name="url_img" value="${films[index].url_img}" required placeholder="Imagen de la Película" class="edit-input">
+
+                    <input type="text" name="title" value="${films[index].title}" required placeholder="Nombre de la Película" class="edit-input">
+
+                    <input type="number" name="year" value="${films[index].year}" required placeholder="Año de la Película" class="edit-input">
+
+                    <input name="description" value="${films[index].description}" required class="edit-input">
+                    
+                    <select name="gender" value"${films[index].gender}" class="edit-input">
                         <option value="Todos">Todos</option>
                         <option value="Terror">Terror</option>
                         <option value="Acción">Acción</option>
@@ -159,8 +163,8 @@ tableFilms.appendChild(tableBody)
                         <option value="Romántico">Romántico</option>
                         <option value="Drama">Drama</option>
                     </select>
-                    <button type="submit">Guardar Cambios</button>
-                    <button type="button" class="cancel-edit">Cancelar Edición</button>
+                    <button type="submit" class="edit-button">Guardar Cambios</button>
+                    <button type="button" class="cancel-edit edit-button">Cancelar Edición</button>
                 </form>
             </td>
             `;

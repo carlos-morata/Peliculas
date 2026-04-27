@@ -251,6 +251,32 @@ select:focus {
     margin-top: 10px;
 }
 
+.edit-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-sizing: var(--box);
+    padding: 10px 5px;
+}
+
+.edit-input {
+    width: fit-content;
+    padding: 5px;
+    background-color: var(--bgSecond);
+    color: var(--textSecond);
+    border: 2px solid var(--colorRed2);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.edit-input:nth-child(4) {
+    width: 63%;
+}
+
+.row-film .edit-button {
+    width: 30%;
+}
+
 .row-film img {
     width: 150px;
     height: 180px;
@@ -369,6 +395,14 @@ select:focus {
     .table-films {
         display: block;
         overflow: auto;
+    }
+
+    .edit-form {
+        flex-direction: column;
+    }
+
+    .edit-input:nth-child(4) {
+        width: 30%;
     }
     
     .container-footer {
