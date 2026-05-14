@@ -339,7 +339,7 @@ select:focus {
 }
 
 /* DISEÑO MÓVIL */
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     
     .container-header {
         display: flex;
